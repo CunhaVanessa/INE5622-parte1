@@ -1,56 +1,62 @@
-# Parte 1: Analisadores Léxicos
+# INE5622 - Parte 1: Analisadores Léxicos 
 
+### Alunos:
+- Gabriel Terra (21105570)
+- Pedro Bressan (22100920)
+- Vanessa Cunha (17100926)
 
 ### Descrição
 ---------
-Este projeto implementa um analisador léxico que identifica identificadores, números inteiros e operadores relacionais com base em diagramas de transição. Além disso, há uma tabela de símbolos que armazena os identificadores e palavras-chave da linguagem, conforme previsto na atividade solicitada pelo professor da disciplina INE5622.
+Este projeto implementa dois analisadores léxicos em Python. O primeiro analisador (Parte A) identifica identificadores, números inteiros e operadores relacionais, utilizando uma tabela de símbolos que armazena palavras-chave e identificadores. O segundo analisador (Parte B) processa a entrada para identificar terminais e não terminais, registrando erros léxicos quando encontra tokens não reconhecidos. Ambos os analisadores foram desenvolvidos conforme as diretrizes da atividade solicitada pelo professor da disciplina INE5622.
 
 ### Requisitos
 ----------
-- Rust 1.75.0+
-- Cargo (gerenciador de pacotes do Rust)
+- Python 3.10 ou superior
 
 ### Como rodar o projeto
 --------------------
 1. Clone o repositório:
 
-   `git clone https://github.com/CunhaVanessa/INE5622-parte1.git`
+        git clone https://github.com/CunhaVanessa/INE5622-parte1.git
 
-   `cd INE5622-parte1` 
+        cd INE5622-parte1 
 
-2. Instale as dependências e compile o projeto:
+2. Execute a Parte A manualmente, o analisador léxico com um arquivo de entrada:
 
-   `cargo build` 
+         python src/parte_a.py inputs_partea/input_partea_correta.txt
+         
+        OU
 
-3. Execute o analisador léxico com um arquivo de entrada:
+         python src/parte_a.py inputs_partea/input_partea_incorreta.txt
 
-   `cargo run -- inputs/entrada_correta.txt`
+3. Execute a Parte B manualmente, o analisador léxico com um arquivo de entrada:
+
+         python src/parte_b.py inputs_parteb/input_parteb_correta.txt
+         
+        OU
+
+         python src/parte_b.py inputs_parteb/input_parteb_incorreta.txt
+
 
 ### Estrutura do repositório
 ------------------------
-- src/ contém o código-fonte do analisador léxico.
-- inputs/ contém os arquivos de teste de entrada.
-- outputs/contém saídas esperadas de teste.
-- tests/ contém testes automatizados.
+- `src/` contém o código-fonte dos analisadores léxicos.
+- `inputs_partea/` contém os arquivos de teste de entrada para a Parte A.
+- `inputs_parteb/` contém os arquivos de teste de entrada para a Parte B.
 
 ### Arquivos de entrada
 -------------------
-1. entrada_correta.txt - Arquivo com tokens válidos para testar o analisador léxico.
-2. entrada_errada_A.txt - Arquivo com erros para testar a captura de erros léxicos na parte A.
-3. entrada_errada_B.txt - Arquivo com erros para testar a captura de erros léxicos na parte B.
+1. `input_partea_correta.txt` - Arquivo com tokens válidos para testar o analisador léxico da Parte A.
+2. `input_partea_incorreta.txt` - Arquivo com erros para testar a captura de erros léxicos na Parte A.
+3. `input_parteb_correta.txt` - Arquivo com tokens válidos para testar o analisador da Parte B.
+4. `input_parteb_incorreta.txt` - Arquivo com erros para testar a captura de erros léxicos na Parte B.
 
 ### Entrada e saída esperada
 ------------------------
-1. Para entradas corretas, o programa gera uma lista de tokens e exibe a tabela de símbolos.
+1. Para entradas corretas, o programa gera uma lista de tokens e exibe a tabela de símbolos na Parte A, e contabiliza terminais e não terminais na Parte B.
 2. Para entradas com erros léxicos, o programa informa o erro e a posição (linha e coluna).
-
-### Como rodar os testes
--------------------------------
-Para rodar os testes basta executar o seguinte comando:
-
-   `cargo test`
 
 ### Instruções adicionais
 ---------------------
-1. O projeto foi desenvolvido e testado em ambiente Linux. 
-2. As instruções de execução e compilação são compatíveis com distribuições Linux com suporte a Rust.
+1. O projeto foi desenvolvido e testado em ambiente Linux e macOS. 
+2. As instruções de execução são compatíveis com distribuições Linux e macOS com suporte a Python.

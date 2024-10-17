@@ -1,0 +1,12 @@
+int main() {
+    float var = 3.14.15;   // Erro: número com dois pontos decimais
+    int x == 10;           // Erro: operador de atribuição incorreto (deve ser =)
+    if (x => 5) {          // Erro: operador relacional incorreto (deve ser >=)
+        x == x + 1;        // Erro: operador de atribuição incorreto (deve ser =)
+    } else {
+        x == x - 1;        // Erro: operador de atribuição incorreto (deve ser =)
+    }
+    return x;
+}
+
+stirng nome = "John";      // Erro: palavra-chave incorreta (deve ser string)

@@ -1,0 +1,29 @@
+int var1 = 10
+int var2 = 20
+int resultado = 0
+
+if var1 > var2
+    resultado = 0
+end if
+
+if var1 < var2
+    resultado = 0
+end if
+
+if var1 == 10
+    resultado = 0
+end if
+
+if var1 >= 10
+    resultado = 0
+end if
+
+if var2 <= 20
+    resultado = 0
+end if
+
+if var1 != var2
+    resultado = 0
+end if
+
+return resultado
